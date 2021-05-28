@@ -5,3 +5,4 @@
 - BlackJack 게임
 - 책장 프로그램
 - 성적표 출력 프로그램
+- fiveDice 게임
