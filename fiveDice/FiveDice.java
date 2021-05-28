@@ -50,7 +50,7 @@ public class FiveDice {
 		for(int i = 1; i < NUM_OF_DICE; i++) {
 			if(sortedDices[i-1] == sortedDices[i]) {
 				same++;
-				if(same == 3) {
+				if(same == 2) {
 					fullHouse = true;
 				}
 			}else {
