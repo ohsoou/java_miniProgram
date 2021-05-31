@@ -29,7 +29,7 @@ public class FiveDice {
 	public void printResult() {
 		result = "아무 결과도 아닙니다.";
 		for(int i = 0; i < NUM_OF_DICE; i++) {
-			System.out.printf("  %d번째 주사위      │", i+1); 
+			System.out.printf("  %dst dice   │", i+1); 
 		}
 		System.out.println();
 		for(int i = 0; i < NUM_OF_DICE; i++) {
@@ -41,6 +41,7 @@ public class FiveDice {
 		isStraight();
 
 		System.out.println(result);
+		System.out.println("===============");
 		
 	}
 	private void isFullHouse() {
