@@ -73,6 +73,8 @@ public class FiveDice {
 		for(int i = 1; i < NUM_OF_DICE; i++) {
 			if(sortedDices[i-1]+1 == sortedDices[i]) {
 				straight++;
+			}else {
+				straight = 0;
 			}
 		}
 		if(straight == 4) {
@@ -95,5 +97,4 @@ public class FiveDice {
 		}
 		return sortedDices;
 	}
-
 }
