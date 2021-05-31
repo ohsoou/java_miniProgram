@@ -18,7 +18,7 @@ public class RunFiveDice {
 		while(going) {
 			System.out.println("다시 던지시겠습니까? 1.Yes 2. No: ");
 			going = sc.nextInt() == 1? true:false;
-				
+			if(going) {
 			System.out.println("몇 개의 주사위를 다시 던지시겠습니까? ");
 			int numReDice = sc.nextInt();
 					
@@ -28,7 +28,9 @@ public class RunFiveDice {
 				System.out.printf("%d> ", i+1);
 				reDice = sc.nextInt();
 				fiveDice.throwSelectDice(reDice-1);
-				fiveDice.printResult();
+				
+			}
+			fiveDice.printResult();
 			}
 		}
 
