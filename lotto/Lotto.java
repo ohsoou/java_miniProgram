@@ -26,9 +26,8 @@ public class Lotto {
 		myNumber.addAll(temp);
 		Collections.sort(myNumber);
 	}
-	public ArrayList<Integer> randomSevenNumber() {
+	public void randomSevenNumber() {
 		HashSet<Integer> temp = new HashSet<>();
-		Random rand = new Random();
 		winningNumber.clear();
 		
 		while(winningNumber.size() < 7) {
@@ -39,6 +38,5 @@ public class Lotto {
 			}
 		}
 		bonus = winningNumber.remove(6);
-		return winningNumber;
 	}
 }

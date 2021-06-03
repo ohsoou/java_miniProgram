@@ -7,8 +7,8 @@ public class RunLotto {
 		Lotto lotto = new Lotto();
 		lotto.randomSevenNumber();
 
-		int myMoney = 0;
-		int myCount = 0;
+		long myMoney = 0;
+		long myCount = 0;
 		
 		while(true) {
 			myMoney += 1000;
