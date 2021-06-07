@@ -11,7 +11,6 @@ public class Board {
 	final public static int BOARD_COLUMN = 10;
 	final public static int BOARD_ROW = 10;
 	static List<Stone> board;
-	private Stone myStone;
 	private List<Stone> myStoneList;
 
 	public Board() {
@@ -24,17 +23,16 @@ public class Board {
 			throw new InvalidSpace();
 		}
 		if(!existStone(stone)) {
-			myStone = stone;
 			board.add(stone);
 		} else {
 			throw new SelectedSpace();
 		}
 	}
 	
-	public boolean isFiveStone() {
-		makeSameColorStoneList();
+	public boolean isFiveStone(Stone myStone) {
+		makeSameColorStoneList(myStone);
 		
-		if(checkHorizontal() || checkVertical() || checkDiagonal() || checkDiagonal_desc()) {
+		if(checkHorizontal(myStone) || checkVertical(myStone) || checkDiagonal(myStone) || checkDiagonal_desc(myStone)) {
 			String winner = myStone.color? "백돌":"흑돌";
 			System.out.println("[["+winner+ " 승리!!!]]");
 			return true;
@@ -43,16 +41,16 @@ public class Board {
 	}
 	
 	
-	private boolean existStone(Stone stone) {
+	private boolean existStone(Stone myStone) {
 		for(Stone stoneOnBoard : board) {
-			if(stone.y == stoneOnBoard.y && stone.x == stoneOnBoard.x) {
+			if(myStone.y == stoneOnBoard.y && myStone.x == stoneOnBoard.x) {
 				return true;
 			}
 		}
 		return false;
 	}
 	
-	private void makeSameColorStoneList(){
+	private void makeSameColorStoneList(Stone myStone){
 		myStoneList.clear();
 
 		for(Stone stoneOnBoard : board) {
@@ -63,7 +61,7 @@ public class Board {
 	}
 
 	//가로
-	private boolean checkHorizontal() {
+	private boolean checkHorizontal(Stone myStone) {
 		int count = 1;
 		int diff = 1;
 		boolean checking = true;
@@ -89,7 +87,7 @@ public class Board {
 		
 	}
 	//세로
-	private boolean checkVertical() {
+	private boolean checkVertical(Stone myStone) {
 		int count = 1;
 		int diff = 1;
 		boolean checking = true;
@@ -117,7 +115,7 @@ public class Board {
 	}
 
 	//대각선 /
-	private boolean checkDiagonal() {
+	private boolean checkDiagonal(Stone myStone) {
 		int count = 1;
 		int diff = 1;
 		boolean checking = true;
@@ -144,7 +142,7 @@ public class Board {
 	}
 
 	//대각선 \
-	private boolean checkDiagonal_desc() {
+	private boolean checkDiagonal_desc(Stone myStone) {
 		int count = 1;
 		int diff = 1;
 		boolean checking = true;
