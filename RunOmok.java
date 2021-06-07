@@ -29,7 +29,6 @@ public class RunOmok {
 			try {
 				board.putStone(stone);
 				GraphicOmock.printOmock(board);
-				Stone stone2 = new Stone(x,y,turn);
 			} catch (InvalidSpace e) {
 				System.out.println("좌표 선택이 잘못되었습니다.");
 				continue;

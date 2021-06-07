@@ -20,7 +20,7 @@ public class Board {
 	}
 	
 	public void putStone(Stone stone) throws InvalidSpace, SelectedSpace{
-		if(stone.x < 0 || stone.y < 0 || stone.x > BOARD_ROW || stone.y > BOARD_ROW) {
+		if(stone.x < 0 || stone.y < 0 || stone.x >= BOARD_ROW || stone.y >= BOARD_ROW) {
 			throw new InvalidSpace();
 		}
 		if(!existStone(stone)) {
