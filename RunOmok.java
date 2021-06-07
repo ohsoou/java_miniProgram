@@ -36,7 +36,7 @@ public class RunOmok {
 				System.out.println("이미 선택된 좌표입니다.");
 				continue;
 			}
-			if(board.isFiveStone()) {
+			if(board.isFiveStone(stone)) {
 				break;
 			}
 			turn = !turn;
