@@ -11,6 +11,13 @@ public class AllAvailablePassword {
 		System.out.println("비밀번호 길이를 입력하세요.>");
 		int input = sc.nextInt();
 		
+		addAvailableCharacter();
+		
+		char[] prevChars = new char[input-1];
+		printAllAvailablePassword(prevChars, input);
+	}
+	
+	private static void addAvailableCharacter() {
 		for(int i = '0'; i <= '9'; i++) {
 			availableList.add((char)i);
 		}
@@ -21,9 +28,6 @@ public class AllAvailablePassword {
 			availableList.add((char)i);
 		}
 		Collections.addAll(availableList, '!','@','#','$','%','^','&','*','(',')');
-		
-		char[] prevChars = new char[input-1];
-		printAllAvailablePassword(prevChars, input);
 	}
 
 	private static void printAllAvailablePassword(char[] prevChars, int len) {
