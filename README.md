@@ -12,6 +12,8 @@
 |로또 1등 2등 당첨 프로그램 |[패키지](https://github.com/ohsoou/java_miniProgram/tree/main/lotto) |[메인](https://github.com/ohsoou/java_miniProgram/blob/main/RunLotto.java)|
 |오목 게임 |[패키지](https://github.com/ohsoou/java_miniProgram/tree/main/omok) |[메인](https://github.com/ohsoou/java_miniProgram/blob/main/RunOmok.java)|
 |길이에 대해 가능한 모든 비밀번호 출력||[메인](https://github.com/ohsoou/java_miniProgram/blob/main/AllAvailablePassword.java)|
+|차량 5부제 |[패키지](https://github.com/ohsoou/java_miniProgram/tree/main/restrictedCar) |[메인](https://github.com/ohsoou/java_miniProgram/blob/main/RunRestrictedCar.java)|
+
 
 
 
