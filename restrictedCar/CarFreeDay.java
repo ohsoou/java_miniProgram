@@ -4,6 +4,7 @@ import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,11 +31,11 @@ public class CarFreeDay {
 	
 	static {
 		carFreeCondition = new HashMap<>();
-		carFreeCondition.put(DayOfWeek.MONDAY, new ArrayList<>() {{add(1); add(6);}});
-		carFreeCondition.put(DayOfWeek.TUESDAY, new ArrayList<>() {{add(2); add(7);}});
-		carFreeCondition.put(DayOfWeek.WEDNESDAY, new ArrayList<>() {{add(3); add(8);}});
-		carFreeCondition.put(DayOfWeek.THURSDAY, new ArrayList<>() {{add(4); add(9);}});
-		carFreeCondition.put(DayOfWeek.FRIDAY, new ArrayList<>() {{add(5); add(0);}});
+		carFreeCondition.put(DayOfWeek.MONDAY, new ArrayList<>(Arrays.asList(1,6)));
+		carFreeCondition.put(DayOfWeek.TUESDAY, new ArrayList<>(Arrays.asList(2,7)));
+		carFreeCondition.put(DayOfWeek.WEDNESDAY, new ArrayList<>(Arrays.asList(3,8)));
+		carFreeCondition.put(DayOfWeek.THURSDAY, new ArrayList<>(Arrays.asList(4,9)));
+		carFreeCondition.put(DayOfWeek.FRIDAY, new ArrayList<>(Arrays.asList(5,0)));
 		
 		holiday = new ArrayList<>() {
 			{
