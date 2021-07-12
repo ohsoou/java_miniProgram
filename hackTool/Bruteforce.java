@@ -31,6 +31,8 @@ public class Bruteforce {
 		this.key = getkeyOfMaxValue(countMatchWord);
 		
 		System.out.println("---------복호화 키: "+ key + "------------------------------");
+		System.out.println("영어사전과 일치 데이터 개수" + countMatchWord[key]);
+		System.out.println();
 		printLines();
 
 	}
